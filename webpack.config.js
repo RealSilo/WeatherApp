@@ -1,7 +1,15 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './app/app.js',
+  entry: [
+    '!!script!jquery/dist/jquery.min.js',
+    '!!script!foundation-sites/dist/foundation.min.js',
+    './app/app.js' 
+  ],
+  externals: {
+    jquery: "jQuery",
+    foundation: 'Foundation'
+  },
   output: {
     path: __dirname + '/public',
     filename: 'bundle.js'
@@ -28,11 +36,15 @@ module.exports = {
           presets: ['react', 'es2015', 'stage-0']
         },
         test: /\.jsx?$/,
-        exclude: /node_modules/
+        exclude: /(node_modules|bower_components)/
       }
     ]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery'
+    }),
     new webpack.DefinePlugin({
       'process.env':{
         'NODE_ENV': JSON.stringify('production')
