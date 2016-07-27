@@ -9,6 +9,8 @@ var Examples = require('Examples');
 import 'style!css!foundation-sites/dist/foundation.min.css';
 $(document).foundation();
 
+require('style!css!sass!applicationStyles');
+
 ReactDOM.render(
   <div>
     <Router history={hashHistory}>
