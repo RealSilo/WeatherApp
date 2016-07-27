@@ -19,6 +19,8 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-preset-stage-1": "^6.5.0",
     "express": "^4.13.4",
+    "jquery": "^2.2.1",
+    "foundation-sites": "^6.2.3",
     "html-webpack-plugin": "^2.22.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
@@ -27,8 +29,6 @@
   },
   "devDependencies": {
     "css-loader": "^0.23.1",
-    "foundation-sites": "^6.2.3",
-    "jquery": "^2.2.1",
     "mocha": "^2.5.3",
     "script-loader": "^0.7.0",
     "style-loader": "^0.13.1",
